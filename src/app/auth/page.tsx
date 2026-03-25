@@ -67,7 +67,10 @@ export default function SignupPage() {
         }
     }
 
+
+
     return (
+        <div className="relative min-h-screen w-full overflow-hidden ">
         <div className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
 
             {/* Background */}
@@ -117,7 +120,7 @@ export default function SignupPage() {
 
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl rounded-2xl overflow-visible border border-white/10 backdrop-blur-xl flex bg-black/40">
+            <div className="relative z-10 w-full max-w-5xl rounded-2xl overflow-visible border border-white/10 backdrop-blur-xl flex bg-black/40  md:right-[+20px] lg:right-[+50px] xl:right-[+80px]">
 
                 {/* LEFT */}
                 <div className="w-full lg:w-1/2 p-10 overflow-hidden">
@@ -233,10 +236,10 @@ export default function SignupPage() {
                 </div>
 
                 {/* RIGHT */}
-                <div className="hidden lg:flex w-1/2 relative group">
+                <div className="hidden lg:flex w-1/2 relative group py-8">
 
                     {/* EXTENSION WRAPPER */}
-                    <div className="absolute inset-y-[-65px] right-[-45px] md:right-[-90px] xl:right-[-130px] left-0 rounded-2xl overflow-hidden">
+                    <div className="absolute inset-y-[-65px] right-[-45px] md:right-[-90px] lg:right-[-110px] xl:right-[-130px] left-0 rounded-2xl overflow-hidden">
 
                     {/* IMAGE LAYER */}
                         <div className="absolute inset-0 bg-cover bg-center scale-105 animate-drift">
@@ -297,6 +300,7 @@ export default function SignupPage() {
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }
