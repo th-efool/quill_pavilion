@@ -35,17 +35,19 @@ export default function Login() {
         <div className="h-screen flex items-center justify-center">
             <div className="p-6 border rounded-xl w-80">
                 <input
+                    id = 'aaxx212'
                     className="w-full mb-3 p-2 border"
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
+                    id = 'aaxx21ssa2'
                     className="w-full mb-3 p-2 border"
                     type="password"
                     placeholder="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type="button" onClick={handleLogin} className="w-full bg-orange-500 text-white p-7">
+                <button id = 'aasxx21ssa2' type="button" onClick={handleLogin} className="w-full bg-orange-500 text-white p-7">
                     SignUp
                 </button>
             </div>
