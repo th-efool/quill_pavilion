@@ -24,3 +24,108 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes authEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+    filter: blur(0px);
+  }
+}
+
+.animate-auth {
+  animation: authEnter 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: scale(1.05) translateY(0px);
+  }
+  50% {
+    transform: scale(1.08) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.05) translateY(0px);
+  }
+}
+
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+@keyframes lightShift {
+  0% {
+    opacity: 0.15;
+    transform: translateX(0px);
+  }
+  50% {
+    opacity: 0.25;
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 0.15;
+    transform: translateX(0px);
+  }
+}
+
+.animate-light {
+  animation: lightShift 12s ease-in-out infinite;
+}
+
+@keyframes textFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-textFloat {
+  animation: textFloat 10s ease-in-out infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 60s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scrollRight 50s linear infinite;
+}
