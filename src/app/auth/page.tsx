@@ -48,17 +48,15 @@ export default function SignupPage() {
             return
         }
 
-        window.location.href = "/projects"
+        window.location.href = "/dashboard/projects"
     }
-    const origin =
-        typeof window !== "undefined" ? window.location.origin : ""
-
+    const origin = process.env.NEXT_PUBLIC_SITE_URL!
 
     async function handleOAuth(provider: "github" | "slack" | "discord") {
         const { error } = await supabase.auth.signInWithOAuth({
             provider,
             options: {
-                redirectTo: `${origin}/auth/callback`,
+                redirectTo: `${origin}/dashboard/projects`,
             },
         })
 
@@ -80,10 +78,12 @@ export default function SignupPage() {
             <div className="absolute w-[600px] h-[600px] bg-purple-700/20 blur-[120px] top-[-100px] left-[-100px]" />
             <div className="absolute w-[500px] h-[500px] bg-indigo-600/20 blur-[120px] bottom-[-100px] right-[-100px]" />
 
+
+
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
                 {/* TOP BAND */}
-                <div className="absolute top-[6%] left-0 w-screen overflow-hidden">
+                <div className="absolute top-[2%] md:top-[4%] lg:top-[3%]  left-0 w-screen overflow-hidden">
 
                     <div className="flex animate-scroll-left w-max">
 
@@ -101,7 +101,7 @@ export default function SignupPage() {
                 </div>
 
                 {/* BOTTOM BAND */}
-                <div className="absolute bottom-[6%] left-0 w-screen overflow-hidden">
+                <div className="absolute bottom-[2%] md:bottom-[6%] lg:bottom-[2%] left-0 w-screen overflow-hidden">
 
                     <div className="flex animate-scroll-right w-max">
 
